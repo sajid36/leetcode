@@ -11,23 +11,14 @@ class Solution:
             if not node:
                 return 
             result = result + chr(node.val+97)
-            if node.left and node.right:
-                dfs(node.right,result)
-                dfs(node.left,result)
-                
-            elif node.left and not node.right:
-                dfs(node.left,result)
-                
-                
-            elif not node.left and node.right:
-                dfs(node.right,result)
-                
-                    
-            elif not node.left and not node.right:
+            
+            if not node.left and not node.right:
                 res.append(result[::-1])
                 
-        
-        
+            else:
+                dfs(node.right,result)
+                dfs(node.left,result)
+            
         dfs(root,'')
         res.sort()
         return res[0]
