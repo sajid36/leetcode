@@ -1,0 +1,3 @@
+# Write your MySQL query statement below
+
+select Customers.Name as "Customers" from Customers where Customers.id not in (select distinct customerId from Orders)
