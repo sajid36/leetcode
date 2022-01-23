@@ -13,7 +13,6 @@ class Solution:
                 item.append(matrix[j][i])
             res[i].append(item[::-1])
         
-        
         for i in range (n):
             for j in range (n):
                 matrix[i][j] = res[i][0][j]
