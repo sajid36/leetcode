@@ -18,8 +18,6 @@ class Solution:
             if y-1 >= 0 and grid[x][y-1]=="1":
                 dfs(x,y-1,count)
 
-            
-            
         total = "2"
         for i in range (m):
             for j in range (n):
@@ -28,6 +26,9 @@ class Solution:
                     total = str(int(total) + 1)
                     
                     
+        
+        for i in range (m):
+            print(grid[i])
         
         if int(total)==2: return 0
         elif int(total) - 2 == 1:
